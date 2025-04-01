@@ -1,0 +1,13 @@
+.footer {
+    background-color: #0d5c78;
+    color: white;
+    text-align: center;
+    padding: 1.5rem;
+    font-size: 0.9rem;
+    margin-top: 3rem;
+  }
+  
+  .footer p {
+    margin: 0.3rem 0;
+  }
+  

@@ -1,0 +1,45 @@
+.navbar {
+    width: 100%;
+    background-color: #08607f;
+    color: white;
+    font-family: sans-serif;
+  }
+  
+  .navbar-superior {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+  }
+  
+  .navbar-left a,
+  .navbar-right a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .navbar-categorias {
+    background-color: #13466d;
+    display: flex;
+    padding: 10px 20px;
+    gap: 10px;
+  }
+  
+  .cat-btn {
+    background-color: #1e78a8;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    text-decoration: none;
+  }
+  
+  .vender-btn {
+    background-color: #ff6600;
+    padding: 8px 16px;
+    border-radius: 5px;
+    color: white;
+    text-decoration: none;
+  }
+  

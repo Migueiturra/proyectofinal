@@ -1,0 +1,28 @@
+.galeria {
+    display: grid;
+    gap: 1.5rem;
+    padding: 2rem;
+    width: 100%;
+    max-width: 1600px;
+    margin: 0 auto;
+  }
+  
+  /* Por defecto: 1 columna */
+  .galeria {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  
+  /* Mediano: 3 columnas */
+  @media (min-width: 768px) {
+    .galeria {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  
+  /* Grande: 6 columnas */
+  @media (min-width: 1200px) {
+    .galeria {
+      grid-template-columns: repeat(6, 1fr);
+    }
+  }
+  
