@@ -1,24 +1,28 @@
-// src/components/Navbar.jsx
 import { Link } from "react-router-dom";
-import { useAuth } from "../context/AuthContext"; // 👈 importa el contexto
+import { useAuth } from "../context/AuthContext";
 import "./Navbar.css";
 
 export default function Navbar() {
-  const { usuario, logout } = useAuth(); // 👈 obtenemos el usuario y la función para cerrar sesión
+  const { usuario, logout } = useAuth();
+
+  // 👇 Agrega este log para verificar el estado del usuario
+  console.log("🔎 Usuario en Navbar:", usuario);
 
   return (
     <nav className="navbar">
       <div className="navbar-superior">
         <div className="navbar-left">
+          <Link to="/" className="logo-retrogalaga">🎮 RetroGalaga</Link>
           <Link to="/">Sobre nosotros</Link>
           <Link to="/">Contacto</Link>
         </div>
+
         <div className="navbar-right">
           {usuario ? (
             <>
               <span>Hola, {usuario.nombre}</span>
               <Link to="/perfil">Mi Perfil</Link>
-              <button onClick={logout}>Cerrar sesión</button>
+              <button onClick={logout} className="btn-logout">Cerrar sesión</button>
             </>
           ) : (
             <>

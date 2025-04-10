@@ -1,0 +1,32 @@
+.form-login {
+    max-width: 400px;
+    margin: 2rem auto;
+    background: #1f1f1f;
+    padding: 60px;
+    border-radius: 10px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  
+  .form-login h2 {
+    margin-bottom: 1.5rem;
+    text-align: center;
+    color: white
+  }
+  
+  .form-login input {
+    width: 100%;
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+  }
+  
+  .form-login button {
+    background-color: #45a049;
+    width: 100%;
+}
+

@@ -1,16 +1,22 @@
-import { createContext, useContext, useState } from 'react';
+// src/context/AuthContext.jsx
+import { createContext, useContext, useState } from "react";
 
+// 👉 Crear el contexto
 const AuthContext = createContext();
 
+// 👉 Proveedor del contexto
 export function AuthProvider({ children }) {
   const [usuario, setUsuario] = useState(null);
 
-  const login = (nombre) => {
-    setUsuario({ nombre });
+  // ✅ Esta función solo guarda el usuario y el token (ya autenticado)
+  const login = (usuarioData, token) => {
+    setUsuario(usuarioData);
+    localStorage.setItem("token", token);
   };
 
   const logout = () => {
     setUsuario(null);
+    localStorage.removeItem("token");
   };
 
   return (
@@ -20,7 +26,7 @@ export function AuthProvider({ children }) {
   );
 }
 
-// Custom hook para usar más fácil
+// 👉 Este es el hook personalizado
 export function useAuth() {
   return useContext(AuthContext);
 }
